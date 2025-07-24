@@ -7,9 +7,8 @@ body {
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, 'Inter';
     background-color: var(--color-background-900);
     color: var(--color-text-default);
-    /* margin-left: 39px;
-    margin-right: 39px; */
-    margin: 26px;
+    margin: 0;
+    padding: 0;
 }
 
 .responsive-logo {
@@ -21,7 +20,11 @@ body {
   @apply block text-sm;
 }
 
-
+main {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
 
 @keyframes pingRing {
   0% {

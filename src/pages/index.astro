@@ -1,6 +1,9 @@
 ---
 import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro'
+import Social from '../components/social.astro'
+import Tech from '../components/TechStack.astro'
 import "../styles/global.css"
 const company = "ship_code"
 ---
@@ -8,4 +11,7 @@ const company = "ship_code"
 
 <Layout title={company}>
 	<Header logo={company}/>
+	<Hero />
+	<Social />
+	<Tech />
 </Layout>
