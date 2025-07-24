@@ -2,8 +2,10 @@
 import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css"
+const company = "ship_code"
 ---
 
-<Layout title="ship_code">
-	<Header />
+
+<Layout title={company}>
+	<Header logo={company}/>
 </Layout>

@@ -9,10 +9,41 @@ body {
     color: var(--color-text-default);
     /* margin-left: 39px;
     margin-right: 39px; */
-    margin: 70px;
+    margin: 26px;
 }
 
-@theme {
+.responsive-logo {
+@apply inline-block w-[130px] max-w-full;
+
+}
+
+.status {
+  @apply block text-sm;
+}
+
+
+
+@keyframes pingRing {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  80% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-pingRing {
+  animation: pingRing 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+
+:root {
   /* Background and Neutral Tones */
   --color-background-50:  #f0f2f5;
   --color-background-100: #d6d9dd;
