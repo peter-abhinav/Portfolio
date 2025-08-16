@@ -1,0 +1,78 @@
+---
+import Image from "astro/components/Image.astro"
+import BrandLogo from '../../assets/memoji/hello.webp'
+import {app} from '../../config/index'
+---
+
+<div class="w-full sticky top-1 z-50 mb-30">
+  
+  <header class="header flex w-full py-6 text-lg sm:nowrap sm:justify-start">
+    
+    <div class="relative mx-auto flex w-full items-center justify-between sm:flex sm:items-center" aria-label="Global">
+      
+      <!-- Brand Logo -->
+      <a href="/">
+        <Image src={BrandLogo} alt="Brand Logo" class="h-15 w-auto" aria-label="Brand"/>
+      </a>
+
+      <!-- Nav Bar -->
+      <nav class="nav-list hidden lg:block bg-[#1A1E25]/90 backdrop-blur py-4 px-6 rounded-2xl">
+        <ul class="flex flex-row gap-x-15 items-center tracking-wider">
+          <li><a href="">About</a></li>
+          <li><a href="">Skills</a></li>
+          <li><a href="">Experience</a></li>
+          <li><a href="">Education</a></li>
+          <li><a href="">Projects</a></li>
+        </ul>
+      </nav>
+      
+
+      <!-- CTA Button -->
+<a href={app.links.email} target="_blank" aria-label="Status">
+  <div class="status relative flex backdrop-blur items-center gap-x-2 rounded-[10px] border border-[#30363D]
+  px-4 py-2 text-sm lg:text-lg shadow-sm transition-all hover:shadow-md">
+    <!-- style="border-color: var(--color-border-500); color: var(--color-text-default);" -->
+    <!-- Pulsating Dot -->
+    <span class="relative flex items-center justify-center w-2 h-2">
+      <span class="absolute inset-0 rounded-full border border-[#32C924] animate-pingRing z-0"></span>
+      <span class="absolute inset-0 rounded-full bg-[#10B77F] z-10"></span>
+    </span>
+    <!-- Status Text -->
+    <span class="font-medium tracking-normal">Open to Work</span>
+  </div>
+</a>
+
+
+
+    
+    </div>
+
+  </header>
+
+</div>
+
+
+<style>
+    header.header {
+    position: relative;
+    isolation: isolate;
+  }
+
+  header.header::after {
+    content: '';
+    position: absolute;
+    inset-inline: calc((100vw - 100%) / 2 * -1);
+    top: -10%;
+    bottom: 0;
+
+    /* backdrop-filter: blur(1rem); */
+    z-index: -2;
+  }
+  .nav-list li:hover{
+    color: var(--c-accent);
+  }
+
+  .status{
+    cursor: pointer;
+  }
+</style>

@@ -1,42 +1,35 @@
-<!-- Hero Section -->
-<div class="mt-[18px] max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-  <main class="py-2">
-    <div class="text-left text-[var(--color-text-default)] w-full max-w-md md:max-w-2xl lg:max-w-3xl mx-auto px-6 md:px-8 py-4 rounded-2xl">
+---
+import Image from "astro/components/Image.astro"
+import Engineer from '../assets/memoji/code.webp'
+import {MorphingText} from './React/MorphingText'
+---
 
-      <!-- Title -->
-      <h1 class="text-5xl sm:text-5xl font-semibold leading-tight">
-        Hi, I’m <span class="font-bold">Abhinav <br /> Peter 👋🏻</span>
-      </h1>
+<section class="flex w-full h-auto lg:h-[70vh] mb-15 lg:mb-30 flex-col items-center justify-center">
 
-      <!-- Subtitle -->
-      <p class="text-[18px] font-semibold mt-[6px] tracking-wider text-[var(--color-text-muted)]">
-        Software engineer 🧑‍💻
-      </p>
+  <h1 class="text-[80px] text-center font-bold tracking-wide lg:text-[160px] mb-10">
+    <MorphingText client:load texts={[
+  `Hi, I'm`,
+  'Hola, soy', // Spanish
+  'Salut, je suis', // French
+  'Hallo, ich bin', // German
+  'Ciao, sono ', // Italian
+  'Moshi moshi,' // Japanese
+]}
 
-      <!-- About Paragraph -->
-      <p class="text-[15px] font-regular leading-[20px] tracking-wide mt-[32px]">
-        Hi, I'm Peter — a
-        <span class="font-bold" style="color: #10B77F;">Software Engineer</span>
-        <span>&nbsp;with&nbsp;</span>
-        <span class="font-bold" style="color: #10B77F;">2+ years of experience</span>
-        &nbsp;building scalable, high-performance web applications.
-        <br/><br/>
+/>
+    
+  <span class="text-accent">Abhinav Peter 🙋🏻</span></h1>
 
-        I specialize in full-stack development with <strong>React, Node.js, TypeScript, and MongoDB</strong>, and enjoy crafting clean, maintainable code that solves real-world problems.
-        <br/><br/>
+  <a href="/resume.pdf" target="_blank" 
+  class="flex align-center justify-center backdrop-blur gap-x-2 px-4 py-2 border border-[#30363D] 
+  rounded-2xl hover:shadow-md transition">
+    <p class="text-[16px] lg:text-[25px] text-medium hover:text-accent">Software Engineer </p> 
+    <Image class="h-6 w-auto lg:h-10" src={Engineer} alt="coding"/>
+  </a>
 
-        From building responsive UIs with Tailwind CSS to designing robust RESTful APIs and MVC-based back-ends, I take pride in delivering end-to-end solutions that are both efficient and user-focused.
-        <br/><br/>
+</section>
 
-        Outside of work, I enjoy contributing to side projects, sharing knowledge, and exploring the latest in software architecture and developer tooling.
-        <br/><br/>
 
-        Check out my work on
-        <a href="https://github.com/Hello-Ship-Code" target="_blank" class="text-[#10B77F] font-bold">
-          GitHub 🚀.
-        </a>
-      </p>
+<style>
 
-    </div>
-  </main>
-</div>
+</style>

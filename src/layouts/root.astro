@@ -1,0 +1,61 @@
+---
+import "../styles/global.css";
+import Header from "../components/layout/header.astro";
+import Footer from "../components/layout/footer.astro";
+import { Particles } from "../components/React/Particles.tsx";
+// import LoadingScreen from '../components/React/LoadingScreen.tsx'
+
+const {
+  title,
+  pageTitle,
+  description,
+  url,
+  image
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:url" content={url} />
+    <meta name="twitter:image" content={image} />
+
+    <link rel="icon" href="../assets/icons/logo.svg" type="image/svg+xml" />
+  </head>
+  <!-- Loading screen -->
+  <body class="flex justify-center bg-background text-foreground">
+    <!-- <LoadingScreen client:load > -->
+
+        <!-- Particles background -->
+        <Particles client:load className="fixed inset-0 -z-10" quantity={200}/>  
+
+        <div>
+          
+          <main class="flex min-h-screen h-auto w-full max-w-[90rem] flex-col items-center px-6 pb-10 pt-0 text-[0.92rem] leading-relaxed sm:px-10 lg:px-10">
+                <Header />
+                  <slot />
+                <Footer />
+          </main>
+
+        </div>
+
+      <!-- </LoadingScreen> -->
+  </body>
+
+</html>

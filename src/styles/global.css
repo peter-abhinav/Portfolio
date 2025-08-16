@@ -1,28 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 @import "tailwindcss";
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--color-background-900);
-    color: var(--color-text-default);
-    margin: 0;
-    padding: 0;
+:root {
+  /* ===== 🎨 Raw Tokens (OKLCH) ===== */
+  --glow-color: rgba(139, 92, 246, 0.3);
+
+  /* Base Palette */
+  --c-background: oklch(17.629% 0.01404 258.383); /* #0D1117 */
+  --c-main:       oklch(0.929 0.010 249.8); /* #E6EDF3 */
+  --c-muted:      oklch(0.623 0.027 252.0); /* #8B949E */
+  --c-primary:    oklch(0.624 0.162 174.6); /* #10B77F */
+  --c-accent:     oklch(0.892 0.174 165.9);
+  --c-border:     oklch(0.279 0.021 247.9); /* #30363D */
+
+  /* Font stacks */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+               'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+               'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 
+               "Liberation Mono", "Courier New", monospace;
+
+  /* Radius */
+  --radius: 0.625rem;
+
+  /* Shadows */
+  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs:  0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm:  0 1px 3px 0px hsl(0 0% 0% / 0.10),
+                0 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow-md:  0 1px 3px 0px hsl(0 0% 0% / 0.10),
+                0 2px 4px -1px hsl(0 0% 0% / 0.10);
+  --shadow-lg:  0 1px 3px 0px hsl(0 0% 0% / 0.10),
+                0 4px 6px -1px hsl(0 0% 0% / 0.10);
+  --shadow-xl:  0 1px 3px 0px hsl(0 0% 0% / 0.10),
+                0 8px 10px -1px hsl(0 0% 0% / 0.10);
+  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
 }
 
-.responsive-logo {
-@apply inline-block w-[130px] max-w-full;
+@theme inline {
+  /* ===== 🏷 Semantic Theme Mapping ===== */
+  --color-glow-color: var(--glow-color);
+  --color-background: var(--c-background);
+  --color-foreground: var(--c-main);
+  --color-muted: var(--c-muted);
+  --color-muted-foreground: var(--c-main);
+  --color-primary: var(--c-primary);
+  --color-primary-foreground: var(--c-background);
+  --color-accent: var(--c-accent);
+  --color-accent-foreground: var(--c-background);
+  --color-border: var(--c-border);
 
+  /* Fonts */
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
+
+  /* Radii */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Shadows */
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
 }
 
-.status {
-  @apply block text-sm;
-}
 
-main {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
+
+html {
+    color-scheme: dark;
+    background-color: hsl (var(--c-background));
+    overflow-x:  hidden;
 }
 
 @keyframes pingRing {
@@ -42,34 +96,4 @@ main {
 
 .animate-pingRing {
   animation: pingRing 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-
-:root {
-  /* Background and Neutral Tones */
-  --color-background-50:  #f0f2f5;
-  --color-background-100: #d6d9dd;
-  --color-background-200: #afb5bb;
-  --color-background-300: #89919b;
-  --color-background-400: #606b75;
-  --color-background-500: #3e4752;
-  --color-background-600: #2d343f;
-  --color-background-700: #1e232c;
-  --color-background-800: #12161e;
-  --color-background-900: #0D1117; /* Original background */
-
-  /* Text */
-  --color-text-default:   #E6EDF3;  /* Main Text */
-  --color-text-muted:     #8B949E;  /* Subtext */
-
-  /* Secondary & Accent */
-  --color-secondary-500:  #10B77F;  /* Secondary */
-  --color-accent-500:     #80FFCC;  /* Accent */
-
-  /* Warning & Link */
-  --color-warning-500:    #FFC800;  /* Warning */
-  --color-link-500:       #3B82F6;  /* Link/CTA */
-
-  /* Border */
-  --color-border-500:     #30363D;  /* Neutral Border */
 }
