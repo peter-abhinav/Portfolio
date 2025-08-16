@@ -1,7 +1,7 @@
 ---
 import Thanks from '../assets/memoji/thanks.webp'
-import Image from 'astro/components/Image.astro'
 import Section from './UI/section.astro'
+import {app} from '../config/index.ts'
 
 ---
 
@@ -18,7 +18,7 @@ import Section from './UI/section.astro'
           
         <p>Outside of work, I enjoy contributing to side projects, sharing knowledge, and exploring the latest in software architecture and developer tooling.</p>
 
-        <p>Check out my work on GitHub 🚀.</p>
+        <p>Check out my work on <a href={app.links.github} target="_blank"><span class="text-accent font-bold">GitHub</span></a> 🚀.</p>
       </span>
   </div>
 </Section>

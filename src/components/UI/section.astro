@@ -4,21 +4,20 @@ const {colorTitle, title, Memoji, AltMemoji} = Astro.props
 ---
 
 <section>
-  <div class="flex flex-wrap gap-y-3 lg:flex-nowrap mb-30 items-center-10">
+  <div class="flex flex-wrap gap-y-3 lg:flex-nowrap lg:gap-x-5 mb-30 items-center-10">
 
-      <span class="w-full flex flex-col lg:flex-row items-center">
+      <span class="w-full flex flex-col items-center lg:flex-row lg:items-start">
 
-        <h1 class="flex items-center p-5 justify-center gap-x-2 text-[60px] ">
+        <h1 class="flex items-center justify-center gap-x-2 text-[60px] ">
           <strong class="text-accent">{colorTitle} </strong>{title}
         </h1> 
 
-        <Image src={Memoji} alt={AltMemoji} class="w-auto h-90"/>
+        <Image src={Memoji} alt={AltMemoji} class="w-auto h-90 lg:h-25"/>
 
       </span>
 
 
       <slot/>
 
-      
   </div>
 </section>
