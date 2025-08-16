@@ -1,11 +1,11 @@
 ---
-import Root from '../layouts/root.astro';
+import Root from '../layouts/root.astro'
 import Hero from '../components/hero.astro'
 import About from '../components/about.astro'
-import Tech from '../components/tech.astro'
-import Exp from '../components/experience.astro'
-import Edu from '../components/education.astro'
-import Pro from '../components/projects.astro'
+import Skills from '../components/tech.astro'
+import Experience from '../components/experience.astro'
+import Education from '../components/education.astro'
+import Projects from '../components/projects.astro'
 import Contact from '../components/contact.astro'
 
 const company = "ship_code"
@@ -17,13 +17,14 @@ const company = "ship_code"
   description="Abhinav Peter - Software engineer 🧑‍💻"
   url="https://abhinavpeter.vercel.app"
   image="../assets/icons/logo.svg" >
+
 	<div class="flex w-full flex-col gap-y-10"> 
 	<Hero />
 	<About />
-	<Tech />
-	<Exp />
-	<Edu />
-	<Pro />
+	<Skills />
+	<Experience />
+	<Education />
+	<Projects />
 	<Contact />
 	</div>
 </Root>
