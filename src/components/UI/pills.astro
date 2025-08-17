@@ -5,7 +5,7 @@ const {class:className, Tech = []} = Astro.props
 ---
 
 
-  <span class={cn(className, 'flex flex-wrap gap-x-3 gap-y-6 justify-center')}>
+  <div class={cn(className, 'flex flex-wrap gap-x-3')}>
     {
       Tech.map((tech:[])=>(
         <p class="px-3 py-1 font-regular tracking-wider bg-white/40 rounded-2xl">
@@ -15,5 +15,5 @@ const {class:className, Tech = []} = Astro.props
           </p>
       ))
     }
-  </span>
+  </div>
 </div>

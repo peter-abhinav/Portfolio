@@ -1,6 +1,6 @@
 ---
 import Highlight from "./highlight.astro"
-const {Title, Role, startDate="", endDate=""} = Astro.props
+const {Title, Role="", startDate="", endDate=""} = Astro.props
 ---
 
 <div class="w-full bg-white/0.5">
@@ -9,7 +9,7 @@ const {Title, Role, startDate="", endDate=""} = Astro.props
         {(startDate || endDate) &&(startDate ? `${startDate} - ${endDate}` : endDate)}
       </div>
 
-      <h2 class="py-2 text-1xl"><Highlight>{Role}</Highlight></h2>
+    {Role ?  <h2 class="py-2 text-1xl"><Highlight>{Role}</Highlight></h2>: ''}
       
       <div class="flex flex-col text-[18px] gap-y-4 mt-5">
         <slot/>

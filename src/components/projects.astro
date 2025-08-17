@@ -1,21 +1,35 @@
 ---
 import Idea from '../assets/memoji/idea.webp'
 import Section from './UI/section.astro'
+import Pill from './UI/pills.astro'
+import Title from './UI/sectionInfo.astro'
+
+
+const Technology = [
+  "CSS", "EJS", "Git", "Express JS",
+  "MongoDB","TypeScript", 
+  "JavaScript", "Prisma"
+];
 ---
 
 <Section colorTitle="Projects" Memoji={Idea} AltMemoji="Projects">
 
   <!-- pro 1 -->
   <div>
-    <h2>Linkly</h2>
-    <span>pills</span>
-    <p>
-      I enjoy bringing ideas to life through real-world projects. Here, you'll find some of the work I've done—combining technology, design, and creativity. Take a look!
 
-      I enjoy bringing ideas to life through real-world projects. Here, you'll find some of the work I've done—combining technology, design, and creativity. Take a look!</p>
-<a href=""><button>code</button></a>
-<a href=""><button>demo</button></a>
+          <Title Title="Linkly" endDate="May 2021"></Title>
+
+          <Pill class="gap-y-2 mb-8" Tech={Technology}/>
+
+          <p>
+            I enjoy bringing ideas to life through real-world projects. Here, you'll find some of the work I've done—combining technology, design, and creativity. Take a look! </p>
+          <a href=""><button>code</button></a>
+          <a href=""><button>demo</button></a>
 </div>
+
+
+
+
 
 <a href=""><button>Github</button></a> 
 <!-- svg of github in button  -->
