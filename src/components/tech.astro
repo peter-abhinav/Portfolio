@@ -1,11 +1,11 @@
 ---
 import TechStack from '../assets/memoji/tech.webp'
 import Section from './UI/section.astro'
-
+import Pill from './UI/pills.astro'
+import {images} from '../utils/imagesImport'
+import Image from 'astro/components/Image.astro'
 ---
 
 <Section colorTitle="Tech" title="Stack" Memoji={TechStack} AltMemoji="Tech Stack">
-<span>
-  <h1>Pills</h1>
-</span>
+<Pill TechImage={images.c.src} AltTechImageTitle="{images.c.alt}" TechTitle={images.c.alt}/>
 </Section>

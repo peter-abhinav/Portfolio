@@ -10,7 +10,7 @@
   --c-muted:      oklch(0.623 0.027 252.0); /* #8B949E */
   --c-primary:    oklch(0.624 0.162 174.6); /* #10B77F */
   --c-accent:     oklch(0.892 0.174 165.9);
-  --c-border:     oklch(0.279 0.021 247.9); /* #30363D */
+  --c-buttonBorder:     oklch(0.279 0.021 247.9); /* #30363D */
 
   /* Font stacks */
   --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -48,7 +48,7 @@
   --color-primary-foreground: var(--c-background);
   --color-accent: var(--c-accent);
   --color-accent-foreground: var(--c-background);
-  --color-border: var(--c-border);
+  --color-buttonBorder: var(--c-buttonBorder);
 
   /* Fonts */
   --font-sans: var(--font-sans);
