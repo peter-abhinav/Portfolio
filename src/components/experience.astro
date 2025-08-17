@@ -1,43 +1,67 @@
 ---
 import Wow from '../assets/memoji/wow.webp'
 import Section from './UI/section.astro'
+import Title from './UI/sectionInfo.astro'
 ---
 
 <Section colorTitle="Experience" Memoji={Wow} AltMemoji="Experience">
 
-
+ <div class="flex flex-col gap-y-10">
   <!-- Job 1 -->
-  <div>
-  <span><h2>DENAURLEN</h2><h2>Sr Software Engineer</h2></span>
-  <h3>Nov 2024 - Aug 2025</h3>
-  <p>Led a group of 5+ engineers in architecting and delivering a secure Single Sign-on ( SSO ) system for an ed-tech platform using microservices, Node.js, Express.js, OAuth2.0, and Clean Architecture, delivering robust APIs for seamless identity and access management.
+   <div>
+        <Title Title="Denaurlen" Role="Sr Software Engineer" startDate="Nov 2024" endDate="July 2025">
+          <p>
+            Led a group of 5+ engineers in architecting and delivering a secure Single Sign-on ( SSO ) system for an ed-tech platform using microservices, Node.js, Express.js, OAuth2.0, and Clean Architecture, delivering robust APIs for seamless identity and access management.
+          </p>
 
-Integrated a centralized GraphQL API gateway and gRPC -based communication between microservices, enabling low-latency, high-throughput cross-service interactions in a distributed architecture.
+          <p>
+            Integrated a centralized GraphQL API gateway and gRPC -based communication between microservices, enabling low-latency, high-throughput cross-service interactions in a distributed architecture.
+          </p>
 
-Developed authentication workflows in Next.js with refresh-token handling secure session management, and optimized storage strategies, While collaborating with a flutter mobile app team to ensure consistent cross-platform experiences.
+          <p>
+            Developed authentication workflows in Next.js with refresh-token handling secure session management, and optimized storage strategies, While collaborating with a flutter mobile app team to ensure consistent cross-platform experiences.
+          </p>
 
-Delivered modern platform features like real-time updates, tailored content feeds, media handling, and analytics, focusing on scalability, security, and production-readiness.
+          <p>
+            Delivered modern platform features like real-time updates, tailored content feeds, media handling, and analytics, focusing on scalability, security, and production-readiness.
+          </p>
 
-Worked closely with design, product, and QA teams to create smooth, secure user flows, Mentored juniors engineers, ran code reviews, contributed to hiring, and maintained clear technical documentation to
-support scaling and future enhancements.
-</p>
-</div>
+          <p>
+            Worked closely with design, product, and QA teams to create smooth, secure user flows, Mentored juniors engineers, ran code reviews, contributed to hiring, and maintained clear technical documentation to support scaling and future enhancements.
+          </p>
+
+        </Title>
+  </div>
 
 
   <!-- Job 2 -->
-  <div>
-  <span><h2>Delta Airlines</h2><h2>Software Engineer</h2></span>
-  <h3>Jan 2023 - Aug 2024</h3>
-  <p>
-    Improved the backend of the existing reservation system platform by migrating key services like booking, payment processing, seat management, and notifications to Node.js and Express microservice architecture.
+    <div>
+    
+    <Title Title="Delta Airlines" Role="Software Engineer" startDate="Jan 2023" endDate="Aug 2024">
+        <p>
+            Improved the backend of the existing reservation system platform by migrating key services like booking, payment processing, seat management, and notifications to Node.js and Express microservice architecture.
+        </p>
 
-Introduced gRPC-based inter-service communications to enhance reliability and throughput between the platform’s core modules.
+        <p>
+          Introduced gRPC-based inter-service communications to enhance reliability and throughput between the platform's core modules.
+        </p>
 
-Upgraded the web frontend using Next.js to modernize flight search, and seat selection.
+        <p>
+          Upgraded the web frontend using Next.js to modernize flight search, and seat selection.
+        </p>
 
-Collaborated with UX designers, product managers, and QA engineers to implement automated email notifications, addressing previous limitations of legacy batch processing systems.
+        <p>
+          Collaborated with UX designers, product managers, and QA engineers to implement automated email notifications, addressing previous limitations of legacy batch processing systems.
+        </p>
 
-Helped the team by sharing knowledge with new engineers, while also mentoring junior engineers.
-  </p>
-  </div>
+        <p>
+          Helped the team by sharing knowledge with new engineers, while also mentoring junior engineers.
+        </p>
+      </Title>
+
+    </div>
+
+
+
+</div>
 </Section>

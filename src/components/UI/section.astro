@@ -5,11 +5,11 @@ const {colorTitle, class: className,title="", Memoji, AltMemoji} = Astro.props
 ---
 
 <section>
-  <div class={cn(className, 'flex flex-wrap gap-y-3 lg:flex-nowrap lg:gap-x-5 mb-30 items-start')}>
+  <div class={cn(className, 'w-auto flex flex-wrap lg:flex-nowrap mb-30 items-start')}>
 
-      <span class="w-full flex flex-col items-center lg:flex-row lg:items-start">
+      <span class="w-full lg:w-1/3 flex flex-col items-center lg:flex-row lg:items-start">
 
-        <h1 class="flex items-center justify-center gap-x-2 text-[60px] ">
+        <h1 class="flex items-center justify-center gap-x-2 text-[50px] ">
           <strong class="text-accent">{colorTitle} </strong>{title}
         </h1> 
 
@@ -17,8 +17,9 @@ const {colorTitle, class: className,title="", Memoji, AltMemoji} = Astro.props
 
       </span>
 
-
-      <slot />
+<div class="w-full lg:w-2/3 flex flex-col gap-4">
+    <slot />
+  </div>
 
   </div>
 </section>
