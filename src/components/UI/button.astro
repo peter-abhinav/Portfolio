@@ -1,0 +1,16 @@
+---
+import {cn} from '../../utils/index'
+
+const {as: Tag = 'a', class: className, href, target, title} = Astro.props
+---
+
+<Tag
+class={cn(className,'flex lg:w-auto justify-center cursor:pointer')},
+href={href},
+target={target},
+data-astro-prefetch
+>
+  <slot name="icon-before"/>
+  <p class={cn(className,'backdrop-blur border border-[#30363D] px-5 py-2  font-medium rounded-2xl')}>{title}</p>
+  <slot name="icon-before"/>
+</Tag>

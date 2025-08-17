@@ -3,6 +3,8 @@ import Idea from '../assets/memoji/idea.webp'
 import Section from './UI/section.astro'
 import Pill from './UI/pills.astro'
 import Title from './UI/sectionInfo.astro'
+import { app } from '../config'
+import Button from './UI/button.astro'
 
 
 const Technology = [
@@ -12,27 +14,26 @@ const Technology = [
 ];
 ---
 
-<Section colorTitle="Projects" Memoji={Idea} AltMemoji="Projects">
+<Section class="flex justify-center" colorTitle="Projects" Memoji={Idea} AltMemoji="Projects">
 
   <!-- pro 1 -->
   <div>
 
           <Title Title="Linkly" endDate="May 2021"></Title>
 
-          <Pill class="gap-y-2 mb-8" Tech={Technology}/>
+          <Pill class="gap-y-3 mb-8" Tech={Technology}/>
 
           <p>
-            I enjoy bringing ideas to life through real-world projects. Here, you'll find some of the work I've done—combining technology, design, and creativity. Take a look! </p>
-          <a href=""><button>code</button></a>
-          <a href=""><button>demo</button></a>
+            I enjoy bringing ideas to life through real-world projects. Here, you'll find some of the work I've done—combining technology, design, and creativity. Take a look!.
+          </p>
+
+          <!-- <div class="flex mt-10 items-center justify-evenly">
+            <a href="https://github.com/peter-abhinav/Linkly" target="_blank" class="backdrop-blur border border-[#30363D] px-5 py-2  font-medium rounded-2xl"><button>code</button></a>
+            <a href="https://linkly-backend-production.up.railway.app" target="_blank" class="backdrop-blur border border-[#30363D] px-5 py-2  font-medium rounded-2xl"><button>demo</button></a>
+          </div> -->
 </div>
 
-
-
-
-
-<a href=""><button>Github</button></a> 
-<!-- svg of github in button  -->
+<Button href={app.links.github} target="_blank" title="Check out my works!!!"/>
 
 
 </Section>

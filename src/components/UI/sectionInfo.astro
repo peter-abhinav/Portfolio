@@ -1,9 +1,10 @@
 ---
+import { cn } from "../../utils"
 import Highlight from "./highlight.astro"
-const {Title, Role="", startDate="", endDate=""} = Astro.props
+const {Title, class: className, Role="", startDate="", endDate=""} = Astro.props
 ---
 
-<div class="w-full bg-white/0.5">
+<div class={cn(className,'w-full bg-white/0.5')}>
       <div class="w-full flex flex-row items-center justify-between">
         <h2 class="text-2xl">{Title}</h2>
         {(startDate || endDate) &&(startDate ? `${startDate} - ${endDate}` : endDate)}
