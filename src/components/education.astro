@@ -1,10 +1,11 @@
 ---
 import AboutMe from '../assets/memoji/about.webp'
 import Image from 'astro/components/Image.astro'
+import Section from './UI/section.astro'
 ---
 
-<section>
-  <h1><strong>Education</strong><Image src={AboutMe} alt="About"/></h1>
+
+<Section colorTitle="Education" Memoji={AboutMe} AltMemoji="Education">
 
   <!-- edu 1 -->
   <div>
@@ -20,4 +21,4 @@ import Image from 'astro/components/Image.astro'
     <span><h3>Bachelors in computer science</h3><h3>Aug 2021</h3></span>
   <p>GPA: 7.0/10 </p>
 </div>
-</section>
+</Section>

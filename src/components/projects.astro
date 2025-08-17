@@ -1,10 +1,9 @@
 ---
 import Idea from '../assets/memoji/idea.webp'
-import Image from 'astro/components/Image.astro'
+import Section from './UI/section.astro'
 ---
 
-<section>
-  <h1><strong>Projects</strong><Image src={Idea} alt="About"/></h1>
+<Section colorTitle="Projects" Memoji={Idea} AltMemoji="Projects">
 
   <!-- pro 1 -->
   <div>
@@ -22,4 +21,4 @@ import Image from 'astro/components/Image.astro'
 <!-- svg of github in button  -->
 
 
-</section>
+</Section>

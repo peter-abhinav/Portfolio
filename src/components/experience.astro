@@ -1,10 +1,10 @@
 ---
 import Wow from '../assets/memoji/wow.webp'
-import Image from 'astro/components/Image.astro'
+import Section from './UI/section.astro'
 ---
 
-<section>
-  <h1><strong>Experience</strong><Image src={Wow} alt="About"/></h1>
+<Section colorTitle="Experience" Memoji={Wow} AltMemoji="Experience">
+
 
   <!-- Job 1 -->
   <div>
@@ -40,4 +40,4 @@ Collaborated with UX designers, product managers, and QA engineers to implement 
 Helped the team by sharing knowledge with new engineers, while also mentoring junior engineers.
   </p>
   </div>
-</section>
+</Section>
