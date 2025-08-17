@@ -1,10 +1,11 @@
 ---
 import Image from "astro/components/Image.astro"
-const {colorTitle, title="", Memoji, AltMemoji} = Astro.props
+import { cn } from "../../utils"
+const {colorTitle, class: className,title="", Memoji, AltMemoji} = Astro.props
 ---
 
 <section>
-  <div class="flex flex-wrap gap-y-3 lg:flex-nowrap lg:gap-x-5 mb-30 items-center-10">
+  <div class={cn(className, 'flex flex-wrap gap-y-3 lg:flex-nowrap lg:gap-x-5 mb-30 items-start')}>
 
       <span class="w-full flex flex-col items-center lg:flex-row lg:items-start">
 

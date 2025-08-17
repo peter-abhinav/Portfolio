@@ -2,10 +2,20 @@
 import TechStack from '../assets/memoji/tech.webp'
 import Section from './UI/section.astro'
 import Pill from './UI/pills.astro'
-import {images} from '../utils/imagesImport'
-import Image from 'astro/components/Image.astro'
+
+const Technology = [
+  "C", "Go", "CSS", "EJS", "Git", "Shell", "HTML", "REST API",
+  "React", "Astro", "Railway", "Vercel", "gRPC", "Express JS",
+  "Python", "MongoDB", "MySQL", "Postgres", "TypeScript", 
+  "JavaScript", "Hacker Rank"
+];
+
+
 ---
 
+
 <Section colorTitle="Tech" title="Stack" Memoji={TechStack} AltMemoji="Tech Stack">
-<Pill TechImage={images.c.src} AltTechImageTitle="{images.c.alt}" TechTitle={images.c.alt}/>
+      <!-- <span class="flex flex-col gap-y-4 bg-white/0.5"> -->
+            <Pill Tech={Technology}/>
+      <!-- </span> -->
 </Section>

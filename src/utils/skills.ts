@@ -1,3 +1,1 @@
-export const tech = () => {
-  ;['abc', 'efg']
-}
+export { cn } from './tailwind'
