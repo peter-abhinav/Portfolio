@@ -99,6 +99,7 @@ html {
     color-scheme: dark;
     background-color: hsl (var(--c-background));
     overflow-x:  hidden;
+     scroll-behavior: smooth; 
 }
 
 @keyframes pingRing {
