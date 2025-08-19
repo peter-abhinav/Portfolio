@@ -5,7 +5,11 @@
   --glow-color: rgba(139, 92, 246, 0.3);
 
   /* Base Palette */
-  --c-background: oklch(17.629% 0.01404 258.383); /* #0D1117 */
+  /* --c-background: oklch(17.629% 0.01404 258.383); #0D1117 */
+  /* --c-background: oklch(10% 0.01 260); deep bluish-black */
+  --c-background: oklch(10% 0.02 270); /* dark navy-indigo */
+
+
   --c-main:       oklch(0.929 0.010 249.8); /* #E6EDF3 */
   --c-muted:      oklch(0.623 0.027 252.0); /* #8B949E */
   --c-primary:    oklch(0.624 0.162 174.6); /* #10B77F */

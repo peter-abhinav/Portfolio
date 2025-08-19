@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef } from 'react'
 import { cn } from '../../utils/index'
 
 const morphTime = 1.5
-const cooldownTime = 1
+const cooldownTime = 2
 
 const useMorphingText = (texts: string[]) => {
   const textIndexRef = useRef(0)
