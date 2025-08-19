@@ -7,34 +7,52 @@ import { app } from '../config'
 import Button from './UI/button.astro'
 
 
-const Technology = [
+const Linkly = [
   "CSS", "EJS", "Git", "Express JS",
   "MongoDB","TypeScript", 
   "JavaScript", "Prisma"
 ];
+
+const ReactApp = [
+  "CSS", "EJS", "Git","TypeScript", "JavaScript", "React", "HTML"
+];
 ---
 
-
 <Section colorTitle="Projects" Memoji={Idea} AltMemoji="Projects">
+
+
+  <div class="flex flex-col gap-y-10">
   <!-- pro 1 -->
-  <div>
 
-          <Title Title="Linkly" endDate="May 2021">
+    <div>
 
-            <Pill class="gap-y-3 mb-8" Tech={Technology}/>
+            <Title Tag="a" href="https://github.com/peter-abhinav/Linkly" target="_blank" Title="Linkly – URL Shortener & Auth Hub" endDate="">
 
-            <p>
-              I enjoy bringing ideas to life through real-world projects. Here, you'll find some of the work I've done—combining technology, design, and creativity. Take a look!.
-            </p>
-          </Title>
+              <Pill class="gap-y-3 mb-8" Tech={Linkly}/>
 
-          <!-- <div class="flex mt-10 items-center justify-evenly">
-            <a href="https://github.com/peter-abhinav/Linkly" target="_blank" class="backdrop-blur border border-[#30363D] px-5 py-2  font-medium rounded-2xl"><button>code</button></a>
-            <a href="https://linkly-backend-production.up.railway.app" target="_blank" class="backdrop-blur border border-[#30363D] px-5 py-2  font-medium rounded-2xl"><button>demo</button></a>
-          </div> -->
+              <p>
+                A backend app for user authentication and URL shortening, built with Node.js, Express, Prisma, MongoDB, and JWT. Features include secure user signup/login, short URL generation with analytics, and modular APIs for authentication and URL management.
+              </p>
+            </Title>
+
+    </div>
+
+<!-- project 2 -->
+    <div>
+
+            <Title Tag="a" href="https://github.com/peter-abhinav/react-apps" target="_blank" Title="React Apps - Vite + React + TS + TailwindCSS" endDate="">
+
+              <Pill class="gap-y-3 mb-4" Tech={ReactApp}/>
+
+              <p>
+                A collection of mini React projects, including a real-time clock, weather app, and to-do app with persistent storage. Built with TypeScript, TailwindCSS, and reusable components to practice modern front-end development.
+              </p>
+            </Title>
+
+    </div>
+
+  <Button href={app.links.github} target="_blank" title="Check out my Github"/>
+
 </div>
-
-<Button href={app.links.github} target="_blank" title="Check out my works!!!"/>
-
 
 </Section>
