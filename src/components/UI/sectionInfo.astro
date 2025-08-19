@@ -12,7 +12,7 @@ const {Title, class: className, Role="", startDate="", endDate=""} = Astro.props
 
     {Role ?  <h2 class="py-2 text-1xl"><Highlight>{Role}</Highlight></h2>: ''}
       
-      <div class="flex flex-col text-[18px] gap-y-4 mt-5">
+      <div class="flex flex-col gap-y-4 mt-5">
         <slot/>
       </div>
 </div>
