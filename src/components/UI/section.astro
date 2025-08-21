@@ -1,8 +1,17 @@
 ---
-import {Image} from "astro:assets"
+// import {Image} from "astro:assets"
 import { cn } from "../../utils"
 import Highlight from "./highlight.astro"
 const {colorTitle, class: className,title="", Memoji, AltMemoji} = Astro.props
+
+const basePath = `/assets/${Memoji}`
+
+const variants =[
+  {size: 80, file: `${basePath}-80.webp`},
+  {size: 160, file: `${basePath}-160.webp`},
+  {size: 240, file: `${basePath}-240.webp`},
+  
+]
 ---
 
 <section>
@@ -12,12 +21,13 @@ const {colorTitle, class: className,title="", Memoji, AltMemoji} = Astro.props
         
         <h1 class="text-[30px] lg:text-[40px]"><Highlight>{colorTitle}</Highlight>{title}</h1>
   
-        <Image
-          src={Memoji}
-          alt="Optimized image"
-          widths={[80, 160]}
+        <img
+          src={variants[0].file}
+          alt={AltMemoji}
+          srcset={variants.map(v=> `${v.file} ${v.size}w`).join(", ")}
           sizes="80px"
-          format="webp"
+          width="80"
+          height="80"
           loading="lazy"
           decoding="async"
           class="w-auto h-[80px]"
@@ -28,6 +38,7 @@ const {colorTitle, class: className,title="", Memoji, AltMemoji} = Astro.props
       <!-- text/slot -->
   <div class="w-full md:w-2/3 flex flex-col md:text-[14px] lg:text-[20px]">
       <slot/>
+
   </div>
 
   </div>
