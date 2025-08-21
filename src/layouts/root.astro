@@ -17,14 +17,14 @@ const {
 <html lang="en">
   <head>
     
-  <!-- Google tag (gtag.js) -->
-  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-CW3MBYSEP8"></script>
-    <script is:inline>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script defer is:inline src="https://www.googletagmanager.com/gtag/js?id=G-CW3MBYSEP8"></script>
+      <script is:inline>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-        gtag('config', 'G-CW3MBYSEP8');
+          gtag('config', 'G-CW3MBYSEP8');
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -53,7 +53,7 @@ const {
     <LoadingScreen client:load >
 
         <!-- Particles background -->
-        <Particles client:load className="fixed inset-0 -z-10" quantity={160}/>  
+        <Particles client:idle className="fixed inset-0 -z-10" quantity={160}/>  
 
         <div>
           

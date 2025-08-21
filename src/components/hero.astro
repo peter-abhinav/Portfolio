@@ -1,29 +1,31 @@
 ---
 import Image from "astro/components/Image.astro"
 import Engineer from '../assets/memoji/code.webp'
-import {MorphingText} from './React/MorphingText'
+import Highlight from "./UI/highlight.astro"
+// import {MorphingText} from './React/MorphingText'
 ---
 
 <section class="flex w-full h-auto lg:h-[70vh] mb-15 lg:mb-30 flex-col items-center justify-center">
 
   <h1 class="text-[80px] text-center font-bold tracking-wide lg:text-[160px] mb-10">
-    <MorphingText client:load texts={[
+    <!-- <MorphingText client:load texts={[
   'Hola, soy', // Spanish
   `Hi, I'm`,
   'Salut, je suis', // French
   'Hallo, ich bin', // German
   'Ciao, sono ', // Italian
   'Moshi moshi,' // Japanese
-]}
+]} 
 
-/>
+/> -->
     
-  <span class="text-accent">Abhinav Peter 🙋🏻</span></h1>
+  <span>Hi I'm, <Highlight>Abhinav Peter 🙋🏻</Highlight></span>
 
-  <a href="/resume.pdf" target="_blank" 
-  class="flex align-center justify-center backdrop-blur gap-x-2 px-4 py-2 border border-[#30363D] 
+</h1>
+
+  <a href="/resume.pdf" target="_blank" class="flex items-center justify-center backdrop-blur gap-x-1 px-4 py-2 border border-[#30363D] 
   rounded-2xl hover:shadow-md transition">
-    <p class="text-[16px] lg:text-[25px] text-medium hover:text-accent">Software Engineer </p> 
+    <p class="text-[16px] lg:text-[22px] text-medium hover:text-accent">Resume</p> 
     <Image class="h-6 w-auto lg:h-10" src={Engineer} alt="coding"/>
   </a>
 
