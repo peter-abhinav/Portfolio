@@ -7,15 +7,15 @@ import { app } from '../config'
 import Button from './UI/button.astro'
 
 
-const Linkly = [
-  "CSS", "EJS", "Git", "Express JS",
-  "MongoDB","TypeScript", 
-  "JavaScript", "Prisma"
-];
+// const Linkly = [
+//   "CSS", "EJS", "Git", "Express JS",
+//   "MongoDB","TypeScript", 
+//   "JavaScript", "Prisma"
+// ];
 
-const ReactApp = [
-  "CSS", "EJS", "Git","TypeScript", "JavaScript", "React", "HTML"
-];
+// const ReactApp = [
+//   "CSS", "EJS", "Git","TypeScript", "JavaScript", "React", "HTML"
+// ];
 ---
 
 <Section colorTitle="Projects" Memoji={Idea} AltMemoji="Projects">
@@ -26,9 +26,9 @@ const ReactApp = [
 
     <div>
 
-            <Title Tag="a" href="https://github.com/peter-abhinav/Linkly" target="_blank" Title="Linkly – URL Shortener & Auth Hub" endDate="">
+            <Title Tag="a" href="https://github.com/peter-abhinav/Linkly" target="_blank" Title="Linkly" endDate="">
 
-              <Pill class="gap-y-3 mb-8" Tech={Linkly}/>
+              <!-- <Pill class="gap-y-3 mb-8" Tech={Linkly}/> -->
 
               <p>
                 A backend app for user authentication and URL shortening, built with Node.js, Express, Prisma, MongoDB, and JWT. Features include secure user signup/login, short URL generation with analytics, and modular APIs for authentication and URL management.
@@ -40,9 +40,9 @@ const ReactApp = [
 <!-- project 2 -->
     <div>
 
-            <Title Tag="a" href="https://github.com/peter-abhinav/react-apps" target="_blank" Title="React Apps - Vite + React + TS + TailwindCSS" endDate="">
+            <Title Tag="a" href="https://github.com/peter-abhinav/react-apps" target="_blank" Title="React Apps" endDate="">
 
-              <Pill class="gap-y-3 mb-4" Tech={ReactApp}/>
+              <!-- <Pill class="gap-y-3 mb-4" Tech={ReactApp}/> -->
 
               <p>
                 A collection of mini React projects, including a real-time clock, weather app, and to-do app with persistent storage. Built with TypeScript, TailwindCSS, and reusable components to practice modern front-end development.
