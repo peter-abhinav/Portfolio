@@ -5,6 +5,8 @@ import Footer from "../components/layout/footer.astro";
 import { Particles } from "../components/React/Particles.tsx";
 import LoadingScreen from '../components/React/LoadingScreen.tsx'
 
+const siteUrl = "https:abhinavpeter.vercel.app"
+
 const {
   title,
   pageTitle,
@@ -16,7 +18,7 @@ const {
 <!doctype html>
 <html lang="en">
   <head>
-    
+
     <!-- Google tag (gtag.js) -->
     <script defer is:inline src="https://www.googletagmanager.com/gtag/js?id=G-CW3MBYSEP8"></script>
       <script is:inline>
@@ -47,10 +49,11 @@ const {
     <meta name="twitter:image" content={image} />
 
     <link rel="icon" href="../assets/icons/logo.svg" type="image/svg+xml" />
+    <link rel="canonical" href={siteUrl}/>
   </head>
 
   <body class="flex justify-center bg-background text-foreground">
-    <!-- <LoadingScreen client:load > -->
+    <LoadingScreen client:load >
 
         <!-- Particles background -->
         <Particles client:idle className="fixed inset-0 -z-10" quantity={80} mdQuantity={160}/>  
