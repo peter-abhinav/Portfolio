@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
-    "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.12.1",
     "framer-motion": "^12.23.12",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "tailwind-merge": "^3.3.1",
-    "tailwindcss": "^4.1.11"
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.12",
+    "tailwindcss": "^4.1.12"
   }
 }
