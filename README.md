@@ -1,5 +1,7 @@
 # 🧑‍💻 Abhinav Peter – Portfolio Website
 
+## THIS IS V2 THE IMPROVED AND OPTIMIZED VERSION
+
 This is a personal portfolio website designed and built by **Abhinav Peter** to showcase skills, experiences, and projects. The website is minimal, fast, and fully responsive, designed using **HTML**, **Tailwind CSS**, and lightweight **JavaScript**.
 
 ---
