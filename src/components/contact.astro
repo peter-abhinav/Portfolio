@@ -6,8 +6,14 @@ import {app} from '../config/index'
 import Button from './UI/button.astro'
 ---
 
-<Section id="Contact" colorTitle="Contact" Memoji="contact" AltMemoji="contactMe">
-  <h1 class="text-[30px] lg:text-[50px]"><Highlight>Have a vision?</Highlight> I'm the one to bring it to life — let's work together. 💼🚀</h1>
-<Button href={app.links.email} target="_blank" class="" title="Contact Me"/>
 
+<Section id="Contact" colorTitle="Contact" Memoji="contact" AltMemoji="contactMe">
+  <h1 class="text-[30px] lg:text-[50px]">
+    <Highlight>Have a vision?</Highlight> 
+    I'm the one to bring it to life — let's work together. 💼🚀
+  </h1>
+
+  <Button href={app.links.email} target="_blank" class="" title="Contact Me"/>
+  
 </Section>
+

@@ -4,7 +4,7 @@ import Highlight from "./highlight.astro"
 const {Tag="",Title, class: className,href=",", target="none", Role="", startDate="", endDate=""} = Astro.props
 ---
 
-<div class={cn(className,'w-full bg-white/0.5')}>
+<div class={cn(className,'w-full')}>
       <div class="w-full flex flex-row items-center justify-between">
       <a href={href} target={target}> <h2 class="text-2xl"> {Title}</h2> </a>
         
